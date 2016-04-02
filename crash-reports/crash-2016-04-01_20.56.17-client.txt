@@ -1,0 +1,190 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 01/04/16 20:56
+Description: Rendering screen
+
+java.lang.IllegalArgumentException: Cannot create a fluidstack from a null fluid
+	at net.minecraftforge.fluids.FluidStack.<init>(FluidStack.java:36)
+	at net.minecraftforge.fluids.FluidStack.<init>(FluidStack.java:67)
+	at tconstruct.smeltery.gui.SmelteryGui.func_146979_b(SmelteryGui.java:151)
+	at net.minecraft.client.gui.inventory.GuiContainer.func_73863_a(GuiContainer.java:119)
+	at tconstruct.smeltery.gui.SmelteryGui.func_73863_a(SmelteryGui.java:64)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1061)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1001)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraftforge.fluids.FluidStack.<init>(FluidStack.java:36)
+	at net.minecraftforge.fluids.FluidStack.<init>(FluidStack.java:67)
+	at tconstruct.smeltery.gui.SmelteryGui.func_146979_b(SmelteryGui.java:151)
+	at net.minecraft.client.gui.inventory.GuiContainer.func_73863_a(GuiContainer.java:119)
+	at tconstruct.smeltery.gui.SmelteryGui.func_73863_a(SmelteryGui.java:64)
+
+-- Screen render details --
+Details:
+	Screen name: tconstruct.smeltery.gui.SmelteryGui
+	Mouse location: Scaled: (266, 97). Absolute: (798, 543)
+	Screen size: Scaled: (480, 279). Absolute: (1440, 837). Scale factor of 3
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 2 total; [EntityClientPlayerMP['Shendon'/634, l='MpServer', x=-39,59, y=56,62, z=-367,34], EntityOtherPlayerMP['SnokeOne'/29669, l='MpServer', x=-80,69, y=51,00, z=-368,53]]
+	Chunk stats: MultiplayerChunkCache: 441, 441
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (16,64,-72), Chunk: (at 0,4,8 in 1,-5; contains blocks 16,0,-80 to 31,255,-65), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 5133357 game time, 135677 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 142 total; [EntityOtherPlayerMP['SnokeOne'/29669, l='MpServer', x=-80,69, y=51,00, z=-368,53], EntitySquid['Squid'/384021, l='MpServer', x=-20,95, y=48,16, z=-383,81], EntitySquid['Squid'/384020, l='MpServer', x=-24,59, y=48,34, z=-400,25], EntitySquid['Squid'/384022, l='MpServer', x=-15,13, y=48,00, z=-375,50], EntitySquid['Squid'/384018, l='MpServer', x=-14,23, y=48,34, z=-376,78], EntityOtherPlayerMP['SnokeOne'/29294, l='MpServer', x=-66,06, y=52,00, z=-394,72], EntityWitch['Witch'/503863, l='MpServer', x=36,73, y=-0,05, z=-25,65], EntityWitch['Witch'/503871, l='MpServer', x=-1,09, y=-5,62, z=-4,32], EntityZombie['Zombie'/385081, l='MpServer', x=-94,50, y=20,00, z=-344,50], EntityCaveSpider['Cave Spider'/665655, l='MpServer', x=40,58, y=-38,62, z=-25,64], EntityZombie['Zombie'/385083, l='MpServer', x=-93,50, y=20,00, z=-351,50], EntityZombie['Zombie'/385082, l='MpServer', x=-96,50, y=20,00, z=-350,50], EntityZombie['Zombie'/385094, l='MpServer', x=26,50, y=70,00, z=-306,50], EntityCaveSpider['Cave Spider'/685134, l='MpServer', x=28,03, y=-36,12, z=39,52], EntityZombie['Zombie'/384072, l='MpServer', x=-60,94, y=60,00, z=-298,50], EntityCaveSpider['Cave Spider'/650334, l='MpServer', x=-20,79, y=-29,62, z=-12,17], EntityOtherPlayerMP['SnokeOne'/29669, l='MpServer', x=260,41, y=72,00, z=-784,97], EntitySpider['Spider'/677975, l='MpServer', x=19,75, y=-43,62, z=-42,64], EntityCaveSpider['Cave Spider'/576608, l='MpServer', x=27,56, y=-0,62, z=-11,56], EntityCaveSpider['Cave Spider'/685175, l='MpServer', x=39,27, y=-42,62, z=-10,56], EntityCaveSpider['Cave Spider'/685194, l='MpServer', x=35,27, y=-42,62, z=-19,56], EntityZombie['Zombie'/675977, l='MpServer', x=16,63, y=-53,04, z=-28,46], EntityCaveSpider['Cave Spider'/650383, l='MpServer', x=-20,04, y=-35,63, z=-18,99], EntityCaveSpider['Cave Spider'/675980, l='MpServer', x=5,63, y=-48,30, z=41,54], EntityBat['Bat'/384140, l='MpServer', x=-61,50, y=17,40, z=-354,84], EntityCaveSpider['Cave Spider'/675974, l='MpServer', x=-18,37, y=-43,29, z=34,54], EntityBat['Bat'/384139, l='MpServer', x=-56,25, y=18,10, z=-373,25], EntityCaveSpider['Cave Spider'/650374, l='MpServer', x=2,40, y=-1,62, z=-6,10], EntityCaveSpider['Cave Spider'/476307, l='MpServer', x=44,32, y=-5,62, z=27,24], EntityCaveSpider['Cave Spider'/675984, l='MpServer', x=-36,33, y=-39,97, z=-19,41], EntitySkeleton['Skeleton'/509091, l='MpServer', x=9,62, y=-30,62, z=-31,89], EntityZombie['Zombie'/510112, l='MpServer', x=-22,95, y=-53,62, z=-17,40], EntityCaveSpider['Cave Spider'/678078, l='MpServer', x=13,27, y=-41,43, z=9,90], EntityZombie['Zombie'/629948, l='MpServer', x=-0,17, y=-1,62, z=-9,61], EntityCaveSpider['Cave Spider'/678069, l='MpServer', x=-14,32, y=-47,74, z=30,27], EntityItem['item.item.egg'/381128, l='MpServer', x=-59,08, y=50,05, z=-374,91], EntityCreeper['Creeper'/385232, l='MpServer', x=8,50, y=66,00, z=-374,50], EntityCaveSpider['Cave Spider'/504048, l='MpServer', x=1,11, y=-5,62, z=0,87], EntityBat['Bat'/385276, l='MpServer', x=-39,78, y=28,05, z=-388,56], EntityZombie['Zombie'/683249, l='MpServer', x=24,63, y=-33,62, z=-16,29], EntitySkeleton['Skeleton'/384254, l='MpServer', x=-107,50, y=18,00, z=-327,50], EntityBat['Bat'/385275, l='MpServer', x=-40,34, y=27,23, z=-400,38], EntityOtherPlayerMP['SnokeOne'/24131, l='MpServer', x=-66,03, y=52,00, z=-394,69], EntityCaveSpider['Cave Spider'/506133, l='MpServer', x=-7,06, y=-2,62, z=-0,29], EntitySkeleton['Skeleton'/385365, l='MpServer', x=17,28, y=65,00, z=-376,78], EntitySkeleton['Skeleton'/385366, l='MpServer', x=17,50, y=67,00, z=-384,50], EntitySlime['Slime'/365913, l='MpServer', x=-53,22, y=21,00, z=-447,22], EntityOtherPlayerMP['SnokeOne'/29669, l='MpServer', x=-339,25, y=67,38, z=-990,63], EntityCaveSpider['Cave Spider'/664936, l='MpServer', x=-17,13, y=-29,62, z=-22,78], EntityCaveSpider['Cave Spider'/576877, l='MpServer', x=-0,70, y=-2,62, z=1,20], EntitySkeleton['Skeleton'/372074, l='MpServer', x=-73,13, y=40,00, z=-410,53], EntityZombie['Zombie'/385386, l='MpServer', x=-118,50, y=23,00, z=-327,53], EntityCreeper['Creeper'/293237, l='MpServer', x=-65,66, y=27,00, z=-402,44], EntityZombie['Zombie'/648591, l='MpServer', x=0,39, y=-35,63, z=-23,61], EntitySheep['Sheep'/199063, l='MpServer', x=-26,16, y=51,00, z=-407,88], EntityItemFrame['entity.ItemFrame.name'/199067, l='MpServer', x=-63,94, y=52,50, z=-377,50], EntityCaveSpider['Cave Spider'/622992, l='MpServer', x=-27,74, y=-53,62, z=-5,67], EntityItemFrame['entity.ItemFrame.name'/199066, l='MpServer', x=-63,94, y=52,50, z=-376,50], EntityItemFrame['entity.ItemFrame.name'/199065, l='MpServer', x=-63,94, y=52,50, z=-375,50], EntityItemFrame['entity.ItemFrame.name'/199071, l='MpServer', x=-63,94, y=52,50, z=-380,50], EntityItemFrame['entity.ItemFrame.name'/199069, l='MpServer', x=-54,50, y=52,50, z=-375,06], EntityItemFrame['entity.ItemFrame.name'/199068, l='MpServer', x=-63,94, y=52,50, z=-378,50], EntityChicken['Chicken'/199075, l='MpServer', x=-58,16, y=50,00, z=-374,16], EntitySkeleton['Skeleton'/384421, l='MpServer', x=-101,13, y=22,00, z=-352,50], EntityChicken['Chicken'/199074, l='MpServer', x=-58,78, y=50,00, z=-374,22], EntityChicken['Chicken'/199073, l='MpServer', x=-58,41, y=50,00, z=-374,84], EntityItemFrame['entity.ItemFrame.name'/199072, l='MpServer', x=-63,94, y=52,50, z=-379,50], EntitySkeleton['Skeleton'/384422, l='MpServer', x=-94,53, y=20,00, z=-347,00], EntitySheep['Sheep'/199078, l='MpServer', x=-41,25, y=51,00, z=-408,38], EntityItemFrame['entity.ItemFrame.name'/199076, l='MpServer', x=-50,50, y=52,50, z=-375,06], EntitySnowman['Snow Golem'/199083, l='MpServer', x=-86,25, y=33,00, z=-384,53], EntitySlime['Slime'/263597, l='MpServer', x=-42,69, y=31,20, z=-422,31], EntityZombie['Zombie'/199086, l='MpServer', x=-67,89, y=11,00, z=-377,30], EntityZombie['Zombie'/199085, l='MpServer', x=-68,70, y=11,00, z=-377,30], EntityBat['Bat'/385450, l='MpServer', x=-109,13, y=24,40, z=-336,22], EntityVillager['Villager'/199091, l='MpServer', x=-63,44, y=51,00, z=-399,88], EntityChicken['Chicken'/199097, l='MpServer', x=-26,53, y=53,00, z=-422,38], EntitySheep['Sheep'/199096, l='MpServer', x=-73,41, y=51,00, z=-410,81], EntityZombie['Zombie'/377283, l='MpServer', x=-66,38, y=20,00, z=-402,47], EntitySheep['Sheep'/199116, l='MpServer', x=-73,63, y=51,00, z=-383,53], EntityZombie['Zombie'/385482, l='MpServer', x=31,50, y=73,00, z=-438,50], EntitySheep['Sheep'/199123, l='MpServer', x=-108,91, y=75,00, z=-375,88], EntityItem['item.item.egg'/384469, l='MpServer', x=-58,72, y=50,13, z=-374,13], EntityCow['Cow'/199124, l='MpServer', x=-116,28, y=72,00, z=-348,53], EntityCreeper['Creeper'/377309, l='MpServer', x=-62,69, y=13,54, z=-388,69], EntityCreeper['Creeper'/377310, l='MpServer', x=-67,59, y=28,00, z=-372,29], EntityHorse['Horse'/261617, l='MpServer', x=-20,94, y=49,96, z=-409,16], EntityCaveSpider['Cave Spider'/665075, l='MpServer', x=13,65, y=-31,62, z=-18,25], EntityCaveSpider['Cave Spider'/666132, l='MpServer', x=32,93, y=-41,67, z=-2,33], EntityBat['Bat'/384548, l='MpServer', x=-117,72, y=15,57, z=-347,13], EntityZombie['Zombie'/376359, l='MpServer', x=-86,56, y=37,00, z=-356,88], EntitySpider['Spider'/385575, l='MpServer', x=-87,00, y=70,00, z=-319,59], EntitySpider['Spider'/385574, l='MpServer', x=-92,38, y=71,00, z=-320,25], EntityOtherPlayerMP['SnokeOne'/29669, l='MpServer', x=-70,53, y=51,00, z=-388,56], EntityCaveSpider['Cave Spider'/475695, l='MpServer', x=9,56, y=-1,32, z=-48,63], EntityCreeper['Creeper'/385581, l='MpServer', x=-79,31, y=70,00, z=-321,38], EntityOtherPlayerMP['SnokeOne'/6741, l='MpServer', x=-82,41, y=58,17, z=-346,11], EntitySpider['Spider'/383531, l='MpServer', x=-107,50, y=57,00, z=-327,91], EntityCreeper['Creeper'/385579, l='MpServer', x=-76,38, y=69,00, z=-323,03], EntityCaveSpider['Cave Spider'/475705, l='MpServer', x=9,41, y=-35,32, z=-43,75], EntityBat['Bat'/384597, l='MpServer', x=-94,44, y=20,55, z=-344,59], EntityBat['Bat'/384598, l='MpServer', x=-71,91, y=21,68, z=-350,09], EntityBat['Bat'/379509, l='MpServer', x=-69,25, y=39,10, z=-357,34], EntitySkeleton['Skeleton'/384637, l='MpServer', x=-4,50, y=68,00, z=-352,16], EntityCreeper['Creeper'/384632, l='MpServer', x=-9,88, y=68,00, z=-343,13], EntityCaveSpider['Cave Spider'/517752, l='MpServer', x=-0,75, y=-3,62, z=-2,87], EntitySpider['Spider'/665225, l='MpServer', x=-25,08, y=-44,62, z=32,33], EntityBat['Bat'/383645, l='MpServer', x=-71,75, y=13,33, z=-348,69], EntityZombie['Zombie'/462494, l='MpServer', x=-43,92, y=-14,62, z=-9,14], EntityOtherPlayerMP['SnokeOne'/1552, l='MpServer', x=-83,50, y=56,00, z=-343,75], EntityCaveSpider['Cave Spider'/665236, l='MpServer', x=19,82, y=-38,62, z=-30,81], EntityBat['Bat'/383643, l='MpServer', x=8,75, y=49,10, z=-425,56], EntityCreeper['Creeper'/381605, l='MpServer', x=-66,47, y=28,00, z=-388,00], EntityCreeper['Creeper'/381604, l='MpServer', x=-55,72, y=27,00, z=-400,69], EntityWitch['Witch'/648889, l='MpServer', x=11,24, y=-1,62, z=40,67], EntityWitch['Witch'/648891, l='MpServer', x=12,79, y=-1,52, z=42,44], EntityCaveSpider['Cave Spider'/683699, l='MpServer', x=10,44, y=-7,83, z=31,13], EntitySkeleton['Skeleton'/642742, l='MpServer', x=20,74, y=-38,62, z=44,80], EntityZombie['Zombie'/384711, l='MpServer', x=-7,50, y=68,00, z=-340,50], EntitySkeleton['Skeleton'/384716, l='MpServer', x=0,50, y=68,00, z=-337,50], EntityCreeper['Creeper'/384718, l='MpServer', x=-5,50, y=68,00, z=-342,50], EntityCreeper['Creeper'/384721, l='MpServer', x=-2,50, y=68,00, z=-349,50], EntityCreeper['Creeper'/384720, l='MpServer', x=-12,03, y=68,00, z=-343,63], EntitySlime['Slime'/247512, l='MpServer', x=-47,69, y=28,00, z=-433,69], EntityClientPlayerMP['Shendon'/634, l='MpServer', x=-39,59, y=56,62, z=-367,34], EntitySpider['Spider'/500583, l='MpServer', x=5,12, y=-13,62, z=-17,15], EntitySpider['Spider'/385895, l='MpServer', x=-14,00, y=67,00, z=-324,38], EntityOtherPlayerMP['SnokeOne'/9988, l='MpServer', x=-66,34, y=52,00, z=-394,41], EntityBat['Bat'/385890, l='MpServer', x=-64,91, y=24,00, z=-291,91], EntityCreeper['Creeper'/385900, l='MpServer', x=-21,50, y=67,00, z=-314,50], EntitySpider['Spider'/385896, l='MpServer', x=-10,06, y=67,00, z=-325,94], EntityZombie['Zombie'/385913, l='MpServer', x=-102,50, y=32,00, z=-380,50], EntityEnderman['Enderman'/385932, l='MpServer', x=-0,66, y=68,00, z=-356,94], EntityCreeper['Creeper'/385928, l='MpServer', x=4,38, y=66,00, z=-361,31], EntityOtherPlayerMP['Wiris'/384355, l='MpServer', x=-37,25, y=55,00, z=-370,13], EntityBat['Bat'/385946, l='MpServer', x=1,16, y=21,38, z=-289,31], EntityOtherPlayerMP['SnokeOne'/147, l='MpServer', x=-77,50, y=51,00, z=-378,69], EntitySkeleton['Skeleton'/383937, l='MpServer', x=-75,50, y=56,00, z=-343,13], EntitySlime['Slime'/370632, l='MpServer', x=-35,31, y=27,00, z=-418,31], EntitySlime['Slime'/241617, l='MpServer', x=-27,69, y=17,00, z=-419,59], EntityOtherPlayerMP['SnokeOne'/29669, l='MpServer', x=-80,69, y=51,00, z=-368,53], EntitySlime['Slime'/283624, l='MpServer', x=-88,22, y=23,00, z=-334,31]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2444)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:919)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_77, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 141611752 bytes (135 MB) / 1060372480 bytes (1011 MB) up to 1060372480 bytes (1011 MB)
+	JVM Flags: 6 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx1G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -Xmn128M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 15, tallocated: 95
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 80 mods loaded, 80 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAAAA	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAAAA	AM2-Preloader{0.0.2} [AMCore] (minecraft.jar) 
+	UCHIJAAAAAA	appliedenergistics2-core{rv2-beta-8} [AppliedEnergistics2 Core] (minecraft.jar) 
+	UCHIJAAAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAAAA	NotEnoughItems{1.0.5.118} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.118-universal.jar) 
+	UCHIJAAAAAA	PotionExtensionCore{1.7.10-1.1.0} [PotionExtensionCore] (minecraft.jar) 
+	UCHIJAAAAAA	ThaumicTinkerer-preloader{0.1} [Thaumic Tinkerer Core] (minecraft.jar) 
+	UCHIJAAAAAA	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHIJAAAAAA	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10-1.2.4.jar) 
+	UCHIJAAAAAA	arsmagica2{1.4.0.008} [Ars Magica 2] (1.7.10_AM2-1.4.0.008.jar) 
+	UCHIJAAAAAA	DamageIndicatorsMod{3.2.0} [Damage Indicators] ([1.7.10]DamageIndicatorsMod-3.2.0.jar) 
+	UCHIJAAAAAA	CoFHCore{1.7.10R3.1.2} [CoFH Core] (CoFHCore-[1.7.10]3.1.2-325.jar) 
+	UCHIJAAAAAA	BuildCraft|Core{7.1.14} [BuildCraft] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	BuildCraft|Transport{7.1.14} [BC Transport] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	BuildCraft|Silicon{7.1.14} [BC Silicon] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	BuildCraft|Factory{7.1.14} [BC Factory] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	additionalpipes{4.7.0} [Additional Pipes] (additionalpipes-4.7.2.jar) 
+	UCHIJAAAAAA	IC2{2.2.815-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.815-experimental.jar) 
+	UCHIJAAAAAA	AdvancedSolarPanel{1.7.10-3.5.1} [Advanced Solar Panels] (AdvancedSolarPanel-1.7.10-3.5.1.jar) 
+	UCHIJAAAAAA	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	UCHIJAAAAAA	adventurebackpack{1.7.10-0.8d} [Adventure Backpack] (adventurebackpack-1.7.10-0.8d-Unofficial.jar) 
+	UCHIJAAAAAA	appliedenergistics2{rv2-beta-8} [Applied Energistics 2] (appliedenergistics2-rv2-beta-8.jar) 
+	UCHIJAAAAAA	ThermalFoundation{1.7.10R1.2.3} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.3-112.jar) 
+	UCHIJAAAAAA	ThermalExpansion{1.7.10R4.1.2} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.2-240.jar) 
+	UCHIJAAAAAA	BigReactors{0.4.3A} [Big Reactors] (BigReactors-0.4.3A.jar) 
+	UCHIJAAAAAA	qmunitylib{1.0} [QmunityLib] (QmunityLib-1.7.10-0.1.114-universal.jar) 
+	UCHIJAAAAAA	bluepower{0.2.962} [Blue Power] (BluePower-1.7.10-0.2.962-universal.jar) 
+	UCHIJAAAAAA	BrandonsCore{1.0.0.10} [Brandon's Core] (BrandonsCore-1.0.0.10-bugfix.jar) 
+	UCHIJAAAAAA	BuildCraft|Builders{7.1.14} [BC Builders] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	BuildCraft|Energy{7.1.14} [BC Energy] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	BuildCraft|Robotics{7.1.14} [BC Robotics] (buildcraft-7.1.14.jar) 
+	UCHIJAAAAAA	BuildCraft|Compat{7.1.3} [BuildCraft Compat] (buildcraft-compat-7.1.3.jar) 
+	UCHIJAAAAAA	CarpentersBlocks{3.3.7} [Carpenter's Blocks] (Carpenter's Blocks v3.3.7 - MC 1.7.10.jar) 
+	UCHIJAAAAAA	DraconicEvolution{1.0.2-snapshot_9} [Draconic Evolution] (Draconic-Evolution-1.7.10-1.0.2-Snapshot_9.jar) 
+	UCHIJAAAAAA	ImmibisCore{59.0.1} [Immibis Core] (Immibis-Core-1.7.10.jar) 
+	UCHIJAAAAAA	inventorytweaks{1.59-dev-152-cf6e263} [Inventory Tweaks] (InventoryTweaks-1.59-dev-152.jar) 
+	UCHIJAAAAAA	IronChest{6.0.62.742} [Iron Chest] (ironchest-1.7.10-6.0.62.742-universal.jar) 
+	UCHIJAAAAAA	JABBA{1.1.4} [JABBA] (Jabba-1.1.4_1.7.10.jar) 
+	UCHIJAAAAAA	journeymap{5.1.4} [JourneyMap] (journeymap-1.7.10-5.1.4-unlimited.jar) 
+	UCHIJAAAAAA	LiquidXP{59.0.0} [Liquid XP] (liquid-xp-59.0.0.jar) 
+	UCHIJAAAAAA	Mantle{1.7.10-0.3.2.jenkins184} [Mantle] (Mantle-1.7.10-0.3.2.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded{1.7.10R2.8.0RC6} [MineFactory Reloaded] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	RedstoneArsenal{1.7.10R1.1.0RC1} [Redstone Arsenal] (RedstoneArsenal-[1.7.10]1.1.0RC1-36.jar) 
+	UCHIJAAAAAA	ForgeMultipart{1.1.1.320} [Forge Multipart] (ForgeMultipart-1.7.10-1.1.1.320-universal.jar) 
+	UCHIJAAAAAA	Mekanism{7.1.1} [Mekanism] (Mekanism-1.7.10-7.1.2.157.jar) 
+	UCHIJAAAAAA	MekanismGenerators{7.1.1} [MekanismGenerators] (MekanismGenerators-1.7.10-7.1.2.157.jar) 
+	UCHIJAAAAAA	MekanismTools{7.1.1} [MekanismTools] (MekanismTools-1.7.10-7.1.2.157.jar) 
+	UCHIJAAAAAA	minechem{5.0.5.406} [Minechem] (Minechem-1.7.10-5.0.5.406.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatAppliedEnergistics{1.7.10R2.8.0RC6} [MFR Compat: Applied Energistics] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatAtum{1.7.10R2.8.0RC6} [MFR Compat: Atum] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatBackTools{1.7.10R2.8.0RC6} [MFR Compat: BackTools] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatBuildCraft{1.7.10R2.8.0RC6} [MFR Compat: BuildCraft] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatChococraft{1.7.10R2.8.0RC6} [MFR Compat: Chococraft] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatExtraBiomes{1.7.10R2.8.0RC6} [MFR Compat: ExtraBiomes] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatForestry{1.7.10R2.8.0RC6} [MFR Compat: Forestry] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatForgeMicroblock{1.7.10R2.8.0RC6} [MFR Compat: ForgeMicroblock] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatIC2{1.7.10R2.8.0RC6} [MFR Compat: IC2] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatMystcraft{1.7.10R2.8.0RC6} [MFR Compat: Mystcraft] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatProjRed{1.7.10R2.8.0RC6} [MFR Compat ProjectRed] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatRailcraft{1.7.10R2.8.0RC6} [MFR Compat: Railcraft] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatRP2{1.7.10R2.8.0RC6} [MFR Compat: RP2] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatSufficientBiomes{1.7.10R2.8.0RC6} [MFR Compat: Sufficient Biomes] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatThaumcraft{1.7.10R2.8.0RC6} [MFR Compat: Thaumcraft] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatThermalExpansion{1.7.10R2.8.0RC6} [MFR Compat: Thermal Expansion] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	TConstruct{1.7.10-1.8.2.build858} [Tinkers' Construct] (TConstruct-1.7.10-1.8.2a.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatTConstruct{1.7.10R2.8.0RC6} [MFR Compat: Tinkers' Construct] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatTwilightForest{1.7.10R2.8.0RC6} [MFR Compat: TwilightForest] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	MineFactoryReloaded|CompatVanilla{1.7.10R2.8.0RC6} [MFR Compat: Vanilla] (MineFactoryReloaded-[1.7.10]2.8.0RC6-47.jar) 
+	UCHIJAAAAAA	NetherOres{1.7.10R2.3.0RC4} [Nether Ores] (NetherOres-[1.7.10]2.3.0RC4-9.jar) 
+	UCHIJAAAAAA	PowerConverters{1.7.10-3.0.4.47} [Power Converters] (PowerConverters-1.7.10-3.0.4.47.jar) 
+	UCHIJAAAAAA	simplyjetpacks{1.5.3} [Simply Jetpacks] (SimplyJetpacks-MC1.7.10-1.5.3.jar) 
+	UCHIJAAAAAA	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	UCHIJAAAAAA	ThaumicTinkerer{unspecified} [Thaumic Tinkerer] (ThaumicTinkerer-2.5-1.7.10-164.jar) 
+	UCHIJAAAAAA	ThermalDynamics{1.7.10R1.1.0} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.1.0-161.jar) 
+	UCHIJAAAAAA	witchery{0.24.1} [Witchery] (witchery-1.7.10-0.24.1.jar) 
+	UCHIJAAAAAA	McMultipart{1.1.1.320} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.1.1.320-universal.jar) 
+	UCHIJAAAAAA	ForgeMicroblock{1.1.1.320} [Forge Microblocks] (ForgeMultipart-1.7.10-1.1.1.320-universal.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.3.0 - Build 20.19.15.4331' Renderer: 'Intel(R) HD Graphics 4600'
+	CoFHCore: -[1.7.10]3.1.2-325
+	AE2 Version: beta rv2-beta-8 for Forge 10.13.2.1230
+	ThermalFoundation: -[1.7.10]1.2.3-112
+	ThermalExpansion: -[1.7.10]4.1.2-240
+	Mantle Environment: Environment healthy.
+	MineFactoryReloaded: Lacking version information.
+	RedstoneArsenal: Lacking version information.
+	TConstruct Environment: Environment healthy.
+	NetherOres: Lacking version information.
+	ThermalDynamics: -[1.7.10]1.1.0-161
+	AE2 Integration: IC2:ON, RotaryCraft:OFF, RC:OFF, BC:OFF, MJ6:OFF, MJ5:OFF, RF:ON, RFItem:ON, MFR:ON, DSU:ON, FZ:OFF, FMP:ON, RB:OFF, CLApi:OFF, Waila:OFF, InvTweaks:ON, NEI:ON, CraftGuide:OFF, Mekanism:ON, ImmibisMicroblocks:OFF, BetterStorage:OFF
+	Launched Version: 1.7.10-Forge10.13.4.1614-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 4600 GL version 4.3.0 - Build 20.19.15.4331, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

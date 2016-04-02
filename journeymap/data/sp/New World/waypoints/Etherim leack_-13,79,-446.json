@@ -1,0 +1,17 @@
+{
+  "id": "Etherim leack_-13,79,-446",
+  "name": "Etherim leack",
+  "icon": "waypoint-normal.png",
+  "x": -13,
+  "y": 79,
+  "z": -446,
+  "r": 99,
+  "g": 237,
+  "b": 255,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "(Default)": {
+      "name": "(Default)",
+      "lastVersionId": "1.7.10-Forge10.13.4.1614-1.7.10"
+    }
+  },
+  "selectedProfile": "(Default)",
+  "clientToken": "65541104-751d-4100-810e-6e301aa8aee0",
+  "authenticationDatabase": {
+    "690789ae3d273156997bd2fd490f1fcb": {
+      "displayName": "Shendon",
+      "userid": "Shendon",
+      "uuid": "690789ae-3d27-3156-997b-d2fd490f1fcb",
+      "username": "Shendon"
+    }
+  },
+  "launcherVersion": {
+    "name": "Shiginima Launcher v3.100",
+    "format": 18
+  }
+}
